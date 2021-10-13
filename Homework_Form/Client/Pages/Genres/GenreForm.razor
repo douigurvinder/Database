@@ -1,0 +1,14 @@
+﻿<h3>GenreForm</h3>
+<EditForm Model="GetClass1" OnSubmit="On">
+    <InputText @bind-Value="@GetClass1.Name"></InputText>
+    <InputText @bind-Value="@GetClass1.Phone"></InputText>
+    <InputText @bind-Value="@GetClass1.Gmail"></InputText>
+    <button type="submit">sumit</button>
+</EditForm>
+
+
+@code {
+    [Parameter]public Class1 GetClass1 { get; set; }
+    [Parameter]public EventCallback On { get; set; }
+
+}
